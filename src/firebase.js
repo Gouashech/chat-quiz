@@ -18,10 +18,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Providers
+
 export const GoogleProvider = new GoogleAuthProvider();
 
-// Email/Password Authentication
 export const signUpWithEmailAndPassword = async (email, password) => {
   try {
     const userCredential = await createUser(auth, email, password);
@@ -44,6 +43,5 @@ export const signInWithEmailAndPassword = async (email, password) => {
   }
 };
 
-// Add other providers or authentication methods as needed
 
 export { auth };
