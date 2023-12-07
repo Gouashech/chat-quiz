@@ -18,7 +18,6 @@ const quizData = [
         options: ["Mars", "Jupiter", "Earth", "Saturn"],
         correctAnswer: "Jupiter"
     }
-    // Add more questions as needed
 ];
 
 const QuizPage = () => {
