@@ -1,9 +1,6 @@
-import firebase from "firebase/compat/app";
-import 'firebase/compat/auth';
-import { getAuth, createUserWithEmailAndPassword as createUser, signInWithEmailAndPassword as signIn, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from 'firebase/firestore';
+import { getAuth, createUserWithEmailAndPassword as createUser, signInWithEmailAndPassword as signIn } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-
-
 
 
 const firebaseConfig = {
@@ -17,11 +14,13 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const firestore = getFirestore(app);
 
-// Providers
-export const GoogleProvider = new GoogleAuthProvider();
 
-// Email/Password Authentication
+
+
+
+
 export const signUpWithEmailAndPassword = async (email, password) => {
   try {
     const userCredential = await createUser(auth, email, password);
@@ -44,6 +43,8 @@ export const signInWithEmailAndPassword = async (email, password) => {
   }
 };
 
-// Add other providers or authentication methods as needed
 
-export { auth };
+
+
+
+export { app, auth, firestore };

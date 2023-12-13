@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Add this import
+import { useNavigate } from 'react-router-dom';
 import { signUpWithEmailAndPassword, signInWithEmailAndPassword, auth } from '../firebase'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
