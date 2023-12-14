@@ -39,9 +39,9 @@ const Sending = () => {
         type="text"
         value={message}
         onChange={handleChange}
-        placeholder="Type your message..."
+        placeholder="Your score is ..."
       />
-      <button onClick={handleSubmit}>Send</button>
+      <button className="btn btn-primary m-2" onClick={handleSubmit}>Send</button>
     </div>
   );
 };
