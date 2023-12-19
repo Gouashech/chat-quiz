@@ -94,7 +94,7 @@ const QuizPage = () => {
                 </Link>
               </div>
               <div className='sending-box p-2'>
-                <h5>Please, type your score</h5>
+                <h5>Please, type your score for internal comparison</h5>
                 <Sending />
               </div>
               <div>
